@@ -3,10 +3,20 @@
 Use https://reactjs.org/docs/react-component.html#the-component-lifecycle and http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ to answer these on your own then compare answers as a group
 
 1.  Each component has several `lifecycle methods` that you can override to do what?
+      - To run code at particular times in the lifecycle process (component being born and dying)
+
 
 2.  What are the 3 categories of lifecycle methods? (these are the headings from the first link)
+    - Mounting
+    - Updating
+    - Unmounting - one component dismounts and another one mounts
 
 3.  What are the names of the 5 commonly used lifecycle methods? (these are in bold in the first link)
+    * constructor()
+    * render()
+    * componentDidMount()
+    * componentDidUpdate()
+    * componentWillUnmount()
 
 ### Understand
 
@@ -18,7 +28,7 @@ Discuss this question in pairs if you have a 4-person group
 import React, { Component } from "react";
 
 class Mentor extends Component {
-  componentDidUpdate() {
+  componentDidUpdate() {//as soon as Mentor loads it will run a console.log "Logan saved the day!"
     console.log("Logan saved the day!");
   }
   render() {
